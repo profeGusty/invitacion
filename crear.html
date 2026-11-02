@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nueva Noticia</title>
+    <link rel="stylesheet" href="estilos.css">
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <header>
+        <h1>📝 Crear / Cargar Noticia</h1>
+        <nav>
+            <a href="index.html">Ir a la Página Principal</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="formulario-noticia">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" required>
+
+            <label for="subtitulo">Subtítulo:</label>
+            <input type="text" id="subtitulo">
+
+            <label for="desarrollo">Desarrollo (Texto de la Noticia):</label>
+            <textarea id="desarrollo" rows="5" required></textarea>
+
+            <label for="imagenUrl">URL de la Imagen:</label>
+            <input type="url" id="imagenUrl" placeholder="Ej: https://ejemplo.com/imagen.jpg" required>
+
+            <label for="linkNoticia">Link Adicional (opcional):</label>
+            <input type="url" id="linkNoticia" placeholder="Ej: https://ejemplo.com/articulo-completo">
+
+            <button type="submit">Guardar Noticia</button>
+
+            <p id="mensaje-estado"></p>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
